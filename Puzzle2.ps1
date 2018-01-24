@@ -17,4 +17,4 @@ ForEach ($number in 1..30)
   }
 }
 
-write-host $ThisSystemsProperties
+$ThisSystemsProperties | select caption, version, servicepackmajor, servicepackminor, manufacturer, windowsdirectory, locale, freephysicalmemory, totalvirtualmemorysize, freevirtualmemory, disk*deviceid, disk*description, disk*size, disk*freespace, disk*compressed, disk*FreePercent | sort-object | fl *
